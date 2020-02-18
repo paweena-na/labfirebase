@@ -1,8 +1,7 @@
 //import 'package:demofirebase/screen/home.dart';
 import 'package:flutter/material.dart';
 import 'package:lanfirebase/home.dart';
-//import 'package:mareeya/screeen/home.dart';
-//import 'package:mareeya/screeen/raadDatabase.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'test1',
       debugShowCheckedModeBanner: false,
       //home: Text('DATA'),
-      home:Firebase1(),
+      home:Home(),
       
     );
   }
