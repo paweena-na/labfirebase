@@ -14,7 +14,9 @@ class _HomeState extends State<Home> {
       sw1Bool   = false,
       fan1Bool  = false,
       air1Bool  = false;
+      
   int modeInt   = 0, led1Int = 0, sw1Int = 0, fan1Int = 0, air1Int = 0;
+  String name = "";
   IotModel iotModel;
 
   FirebaseDatabase firebaseDatabase = FirebaseDatabase.instance;
@@ -42,6 +44,7 @@ class _HomeState extends State<Home> {
       sw1Int = iotModel.sw1;
       fan1Int = iotModel.fan1;
       air1Int = iotModel.air1;
+      name = iotModel.name;
       checkSwitch();
     });
   }
@@ -109,7 +112,7 @@ class _HomeState extends State<Home> {
         child: Container(
           padding: EdgeInsets.all(20.0),
           child: Column(
-            children: <Widget>[Text('Welcome')],
+            children: <Widget>[Text(name)],
           ),
         ),
       ),
@@ -123,7 +126,7 @@ class _HomeState extends State<Home> {
         color: Colors.yellow.shade300,
         child: Container(
           padding: EdgeInsets.all(16.0),
-          child: Column(
+          child: Column(wq
             children: <Widget>[
               Text('Mode'),
               Row(
